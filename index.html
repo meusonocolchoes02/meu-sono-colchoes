@@ -1,173 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Meu Sono Colchões - Black Friday</title>
 
 <style>
     body {
+        font-family: Arial, sans-serif;
         margin: 0;
         background: #111;
-        font-family: Arial, sans-serif;
+        color: #fff;
     }
 
-    /* HEADER BLACK FRIDAY BRUTO */
     header {
         background: #000;
-        padding: 25px 10px;
+        padding: 20px 10px;
         text-align: center;
-        border-bottom: 4px solid #FFD000;
+        border-bottom: 3px solid #FFD700;
     }
 
     header img {
-        width: 230px;
+        width: 220px;
         max-width: 70%;
-        display: block;
-        margin: 0 auto 18px auto;
-        filter: drop-shadow(0px 0px 6px #000);
+        margin-bottom: 8px;
     }
 
-    h1 {
-        color: #FFD000;
+    header h1 {
         font-size: 34px;
+        color: #FFD700;
+        margin: 5px 0;
         font-weight: 900;
-        margin: 0;
-        text-shadow: 3px 3px 8px black;
-        animation: pulse 1.8s infinite ease-in-out;
+        animation: pulse 2s infinite;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
     }
 
-    h2 {
+    header h3 {
+        font-size: 18px;
         color: #fff;
-        text-align: center;
-        margin-top: 5px;
-        font-size: 20px;
+        margin: 0;
     }
 
     @keyframes pulse {
         0% { transform: scale(1); }
-        50% { transform: scale(1.07); }
+        50% { transform: scale(1.05); }
         100% { transform: scale(1); }
     }
 
-    /* CONTEÚDO */
     .container {
         max-width: 1100px;
-        margin: auto;
-        padding: 20px;
-    }
-
-    .produtos {
-        display: grid;
-        gap: 20px;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        margin: 20px auto;
+        padding: 10px;
     }
 
     .card {
-        background: #222;
-        border: 2px solid #FFD000;
+        background: #1a1a1a;
         border-radius: 12px;
-        padding-bottom: 20px;
+        overflow: hidden;
+        box-shadow: 0 0 12px rgba(0,0,0,0.5);
+        margin-bottom: 40px;
+    }
+
+    .faixa {
+        width: 100%;
+        background: #FFD700;
+        color: #000;
+        padding: 10px;
         text-align: center;
-        box-shadow: 0 0 12px rgba(255,208,0,0.2);
+        font-weight: 900;
+        font-size: 22px;
+        letter-spacing: 1px;
     }
 
     .card img {
         width: 100%;
-        height: 210px;
-        object-fit: cover;
-        border-bottom: 2px solid #FFD000;
+        display: block;
     }
 
-    .card h3 {
-        color: #FFD000;
-        margin: 12px 0 5px;
-        font-size: 20px;
-        font-weight: bold;
+    .card-content {
+        padding: 20px;
+        text-align: center;
     }
 
-    .card p {
-        color: #ddd;
-        font-size: 15px;
-        padding: 0 10px;
-        min-height: 40px;
-    }
+    .preco-
 
-    .btn {
-        background: #25D366;
-        color: #000;
-        font-weight: 700;
-        font-size: 18px;
-        padding: 14px 22px;
-        border-radius: 10px;
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 12px;
-        box-shadow: 0 0 10px #25D366;
-        transition: 0.2s;
-    }
-
-    .btn:hover {
-        background: #1EBE57;
-        transform: scale(1.05);
-    }
-</style>
-
-</head>
-<body>
-
-<header>
-    <img src="https://raw.githubusercontent.com/meusonocolchoes02/meu-sono-colchoes/main/logo-meu-sono.png" alt="Logo Meu Sono Colchões">
-
-    <h1>BLACK FRIDAY MEU SONO COLCHÕES</h1>
-
-    <h2>As melhores ofertas de colchões do Vale do Aço!!!</h2>
-</header>
-
-<div class="container">
-
-    <h1 style="color:#FFD000;text-align:center;margin:20px 0;font-size:26px;">🔥 Produtos em Oferta 🔥</h1>
-
-    <div class="produtos">
-
-        <!-- PRODUTO 1 -->
-        <div class="card">
-            <img src="https://i.imgur.com/JzBDYQU.jpeg">
-            <h3>Colchão Casal Premium</h3>
-            <p>Conforto e durabilidade incomparáveis.</p>
-
-            <a class="btn" 
-               href="https://wa.me/5531972332609?text=Olá!%20Vim%20da%20Landing%20Page%20-%20Casal%20Premium&utm_source=google&utm_medium=landing&utm_campaign=casal_premium">
-                Falar no WhatsApp
-            </a>
-        </div>
-
-        <!-- PRODUTO 2 -->
-        <div class="card">
-            <img src="https://i.imgur.com/HnLQx4m.jpeg">
-            <h3>Colchão Queen Ortopédico</h3>
-            <p>Suporte ideal para sua coluna.</p>
-
-            <a class="btn" 
-               href="https://wa.me/5531972332609?text=Olá!%20Vim%20da%20Landing%20Page%20-%20Queen%20Ortopédico&utm_source=google&utm_medium=landing&utm_campaign=queen">
-                Falar no WhatsApp
-            </a>
-        </div>
-
-        <!-- PRODUTO 3 -->
-        <div class="card">
-            <img src="https://i.imgur.com/LVnQfZg.jpeg">
-            <h3>Colchão Solteiro Confort Plus</h3>
-            <p>Qualidade com preço acessível.</p>
-
-            <a class="btn" 
-               href="https://wa.me/5531972332609?text=Olá!%20Vim%20da%20Landing%20Page%20-%20Solteiro%20Confort&utm_source=google&utm_medium=landing&utm_campaign=solteiro">
-                Falar no WhatsApp
-            </a>
-        </div>
-
-    </div>
-</div>
-
-</body>
-</html>
