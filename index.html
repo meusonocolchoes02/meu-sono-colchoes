@@ -1,61 +1,173 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Meu Sono Colchões - Black Friday</title>
+
 <style>
-body { margin:0; font-family:Arial, sans-serif; background:#f7f7f7; color:#222; }
-header { background:#111; color:#fff; padding:40px 20px; text-align:center; }
-header h1 { font-size:2.5rem; margin:0; }
-header p { font-size:1.2rem; margin-top:10px; }
+    body {
+        margin: 0;
+        background: #111;
+        font-family: Arial, sans-serif;
+    }
 
-.section { padding:50px 20px; max-width:900px; margin:auto; }
-.oferta { background:#fff; margin:20px 0; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.12); }
-.oferta h2 { margin:0 0 10px; }
-.oferta p { margin:0 0 10px; }
-.oferta img { width:100%; border-radius:10px; margin-top:10px; }
+    /* HEADER BLACK FRIDAY BRUTO */
+    header {
+        background: #000;
+        padding: 25px 10px;
+        text-align: center;
+        border-bottom: 4px solid #FFD000;
+    }
 
-.cta { display:block; width:100%; text-align:center; padding:15px; background:#e60000; color:white; text-decoration:none; border-radius:10px; font-size:1.1rem; margin-top:15px; }
+    header img {
+        width: 230px;
+        max-width: 70%;
+        display: block;
+        margin: 0 auto 18px auto;
+        filter: drop-shadow(0px 0px 6px #000);
+    }
 
-footer { background:#111; color:#fff; padding:30px; text-align:center; margin-top:40px; }
+    h1 {
+        color: #FFD000;
+        font-size: 34px;
+        font-weight: 900;
+        margin: 0;
+        text-shadow: 3px 3px 8px black;
+        animation: pulse 1.8s infinite ease-in-out;
+    }
+
+    h2 {
+        color: #fff;
+        text-align: center;
+        margin-top: 5px;
+        font-size: 20px;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.07); }
+        100% { transform: scale(1); }
+    }
+
+    /* CONTEÚDO */
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .produtos {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .card {
+        background: #222;
+        border: 2px solid #FFD000;
+        border-radius: 12px;
+        padding-bottom: 20px;
+        text-align: center;
+        box-shadow: 0 0 12px rgba(255,208,0,0.2);
+    }
+
+    .card img {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+        border-bottom: 2px solid #FFD000;
+    }
+
+    .card h3 {
+        color: #FFD000;
+        margin: 12px 0 5px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .card p {
+        color: #ddd;
+        font-size: 15px;
+        padding: 0 10px;
+        min-height: 40px;
+    }
+
+    .btn {
+        background: #25D366;
+        color: #000;
+        font-weight: 700;
+        font-size: 18px;
+        padding: 14px 22px;
+        border-radius: 10px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 12px;
+        box-shadow: 0 0 10px #25D366;
+        transition: 0.2s;
+    }
+
+    .btn:hover {
+        background: #1EBE57;
+        transform: scale(1.05);
+    }
 </style>
+
 </head>
 <body>
 
 <header>
-  <h1>Black Friday Meu Sono Colchões</h1>
-  <p>As melhores ofertas de colchões do Bom Jardim!</p>
+    <img src="https://raw.githubusercontent.com/meusonocolchoes02/meu-sono-colchoes/main/logo-meu-sono.png" alt="Logo Meu Sono Colchões">
+
+    <h1>BLACK FRIDAY MEU SONO COLCHÕES</h1>
+
+    <h2>As melhores ofertas de colchões do Vale do Aço!!!</h2>
 </header>
 
-<div class="section"> 
-  <div class="oferta">
-    <h2>Colchão Ortopédico Premium</h2>
-    <p>Desconto exclusivo de Black Friday. Conforto e durabilidade.</p>
-    <img src="https://placehold.co/900x500?text=Colchao+Premium" alt="Colchão Premium" />
-    <a class="cta" href="https://wa.me/5531973237789">Quero essa oferta</a>
-  </div>
+<div class="container">
 
-  <div class="oferta">
-    <h2>Colchão Casal Molas Ensacadas</h2>
-    <p>Ideal para quem busca conforto máximo e noites de sono tranquilas.</p>
-    <img src="https://placehold.co/900x500?text=Colchao+Casal" alt="Colchão Casal" />
-    <a class="cta" href="https://wa.me/5531973237789">Falar no WhatsApp</a>
-  </div>
+    <h1 style="color:#FFD000;text-align:center;margin:20px 0;font-size:26px;">🔥 Produtos em Oferta 🔥</h1>
 
-  <div class="oferta">
-    <h2>Conjunto Box + Colchão</h2>
-    <p>Preço especial de Black Friday apenas esta semana!</p>
-    <img src="https://placehold.co/900x500?text=Conjunto+Box" alt="Conjunto Box" />
-    <a class="cta" href="https://wa.me/5531973237789">Garantir agora</a>
-  </div>
+    <div class="produtos">
+
+        <!-- PRODUTO 1 -->
+        <div class="card">
+            <img src="https://i.imgur.com/JzBDYQU.jpeg">
+            <h3>Colchão Casal Premium</h3>
+            <p>Conforto e durabilidade incomparáveis.</p>
+
+            <a class="btn" 
+               href="https://wa.me/5531972332609?text=Olá!%20Vim%20da%20Landing%20Page%20-%20Casal%20Premium&utm_source=google&utm_medium=landing&utm_campaign=casal_premium">
+                Falar no WhatsApp
+            </a>
+        </div>
+
+        <!-- PRODUTO 2 -->
+        <div class="card">
+            <img src="https://i.imgur.com/HnLQx4m.jpeg">
+            <h3>Colchão Queen Ortopédico</h3>
+            <p>Suporte ideal para sua coluna.</p>
+
+            <a class="btn" 
+               href="https://wa.me/5531972332609?text=Olá!%20Vim%20da%20Landing%20Page%20-%20Queen%20Ortopédico&utm_source=google&utm_medium=landing&utm_campaign=queen">
+                Falar no WhatsApp
+            </a>
+        </div>
+
+        <!-- PRODUTO 3 -->
+        <div class="card">
+            <img src="https://i.imgur.com/LVnQfZg.jpeg">
+            <h3>Colchão Solteiro Confort Plus</h3>
+            <p>Qualidade com preço acessível.</p>
+
+            <a class="btn" 
+               href="https://wa.me/5531972332609?text=Olá!%20Vim%20da%20Landing%20Page%20-%20Solteiro%20Confort&utm_source=google&utm_medium=landing&utm_campaign=solteiro">
+                Falar no WhatsApp
+            </a>
+        </div>
+
+    </div>
 </div>
-
-<footer>
-  Meu Sono Colchões - Bom Jardim<br/>
-  WhatsApp: (31) 9 7323-7789
-</footer>
 
 </body>
 </html>
