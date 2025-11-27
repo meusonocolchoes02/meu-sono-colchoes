@@ -1,225 +1,230 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Meu Sono Colchões — Black Friday</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu Sono Colchões - Black Friday Premium</title>
+
 <style>
-  :root{
-    --bg:#f3f4f6;
-    --black:#000;
-    --yellow:#FFD700;
-    --accent:#ffdd33;
-    --whatsapp:#25D366;
-    --card-shadow: 0 6px 18px rgba(0,0,0,0.12);
-    --maxw:1100px;
-    --radius:12px;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;font-family:Inter, "Segoe UI", Arial, sans-serif;background:var(--bg);color:#111;line-height:1.35}
-  .wrap{max-width:var(--maxw);margin:20px auto;padding:16px}
 
-  /* HEADER BLACKFRIDAY */
-  header.site-header{background:var(--black);color:#fff;padding:18px 12px;border-radius:10px}
-  .brand{display:flex;align-items:center;gap:18px;justify-content:center;flex-wrap:wrap}
-  .brand img{height:80px;max-width:46%;object-fit:contain;border-radius:8px}
-  .titles{ text-align:center; }
-  .titles h1{margin:6px 0;font-size:28px;color:var(--yellow);font-weight:800;text-transform:none;letter-spacing:0.5px;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.45); animation: pulse 2.2s infinite;}
-  .titles h2{margin:0;font-size:16px;color:#fff;opacity:0.95}
-  @keyframes pulse {
-    0% { transform: scale(1) }
-    50% { transform: scale(1.035) }
-    100% { transform: scale(1) }
-  }
+/* ======== RESET ======== */
+body {
+    margin: 0;
+    background: #000;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
 
-  /* PRODUCTS GRID */
-  .prod-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px}
-  .card{background:#fff;border-radius:var(--radius);box-shadow:var(--card-shadow);overflow:hidden;display:flex;flex-direction:column}
-  .card .imgwrap{height:220px;background:#eee;display:flex;align-items:center;justify-content:center;overflow:hidden}
-  .card img{width:100%;height:100%;object-fit:cover;display:block}
-  .card-content{padding:14px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
-  .card h3{margin:0 0 8px;font-size:18px;color:#111}
-  .card p.desc{margin:0 0 12px;color:#555;font-size:14px}
+/* ======== BANNER BLACK FRIDAY ======== */
+.banner {
+    background: linear-gradient(135deg, #000000 0%, #2b2b2b 50%, #000000 100%);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 4px solid #FFD700;
+}
 
-  /* Price block */
-  .price-row{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
-  .old-price{color:#888;text-decoration:line-through;font-size:14px}
-  .new-price{color:var(--black);font-size:22px;font-weight:800}
-  .tag-sale{background:var(--yellow);color:#000;padding:6px 8px;border-radius:8px;font-weight:700;font-size:13px}
+.banner h1 {
+    color: #FFD700;
+    font-size: 42px;
+    margin: 0;
+    text-shadow: 3px 3px 10px rgba(255,215,0,0.4);
+    animation: pulse 2s infinite;
+}
 
-  .buy-actions{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
-  .btn-whats{background:var(--whatsapp);color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;gap:8px}
-  .btn-light{background:#111;color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;gap:8px;opacity:0.95}
+.banner h2 {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 10px;
+}
 
-  /* footer */
-  footer.site-footer{margin-top:20px;padding:14px;background:#fff;border-radius:10px;box-shadow:var(--card-shadow);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-  .contact{font-size:15px}
-  .address{color:#444;font-size:14px}
+@keyframes pulse {
+    0% { transform: scale(1);}
+    50% { transform: scale(1.06);}
+    100% { transform: scale(1); }
+}
 
-  /* floating whatsapp */
-  .whats-float{position:fixed;right:18px;bottom:18px;background:var(--whatsapp);color:#fff;border-radius:50%;width:62px;height:62px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,0.28);z-index:9999;text-decoration:none;font-weight:800}
+/* ======== LOGO ======== */
+.logo-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.logo-container img {
+    width: 220px;
+}
 
-  /* responsive tweaks */
-  @media(min-width:900px){
-    .brand img{height:100px}
-    .titles h1{font-size:36px}
-  }
-  @media(max-width:420px){
-    .brand img{height:72px}
-    .titles h1{font-size:20px}
-  }
+/* ======== PRODUTOS ======== */
+.produtos {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
 
-  /* small helper */
-  .muted{color:#666;font-size:13px}
-  .payments{margin-top:10px;color:#222;font-size:14px}
+.card {
+    background: #111;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #FFD700;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255,215,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #FFD700;
+}
+
+.card h3 {
+    color: #FFD700;
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.preco-antigo {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 17px;
+}
+
+.preco-novo {
+    font-size: 28px;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.parcelamento {
+    color: #fff;
+    font-size: 16px;
+}
+
+/* ======== SELO PREMIUM ======== */
+.selo {
+    background: #FFD700;
+    color: #000;
+    padding: 6px 12px;
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+/* ======== BOTÃO WHATSAPP ======== */
+.btn {
+    background: #25D366;
+    color: #fff;
+    padding: 15px;
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: #1cab54;
+}
+
+/* ======== BOTÃO FLUTUANTE ======== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+.whatsapp-float img {
+    width: 40px;
+}
+
 </style>
 </head>
 <body>
-  <div class="wrap">
 
-    <!-- HEADER -->
-    <header class="site-header" role="banner">
-      <div class="brand">
-        <!-- use raw github URLs so file loads from repo -->
-        <img src="https://raw.githubusercontent.com/meusonocolchoes02/meu-sono-colchoes/main/logo-meu-sono.png" alt="Meu Sono Colchões - logo" />
-        <div class="titles">
-          <h1>Black Friday Meu Sono Colchões</h1>
-          <h2>As melhores ofertas de colchões do Vale do Aço!!!</h2>
-        </div>
-      </div>
-    </header>
+<!-- LOGO -->
+<div class="logo-container">
+    <img src="logo-meu-sono.png" alt="Meu Sono Colchões">
+</div>
 
-    <!-- PRODUCTS -->
-    <main>
-      <section style="margin-top:18px;">
-        <h2 style="margin:0 0 8px 0;font-size:20px">Produtos em destaque</h2>
-        <div class="prod-grid">
+<!-- BANNER -->
+<div class="banner">
+    <h1>BLACK FRIDAY PREMIUM</h1>
+    <h2>As melhores ofertas de colchões do Vale do Aço!!!</h2>
+</div>
 
-          <!-- Colchão Casal Premium -->
-          <article class="card" aria-labelledby="prod1">
-            <div class="imgwrap">
-              <img src="https://raw.githubusercontent.com/meusonocolchoes02/meu-sono-colchoes/main/colchao-casal-premium.png" alt="Colchão Casal Premium" />
-            </div>
-            <div class="card-content">
-              <div>
-                <h3 id="prod1">Colchão Casal Premium</h3>
-                <p class="desc">Conforto superior, espuma de alta densidade e suporte ortopédico — ideal para noites de sono reparador.</p>
+<!-- PRODUTOS -->
+<div class="produtos">
 
-                <!-- Prices -->
-                <div class="price-row">
-                  <!-- Old price (riscado) -->
-                  <div class="old-price">R$ <span id="oldprice">2.530,00</span></div>
-                  <!-- New price -->
-                  <div class="new-price">R$ <span id="newprice">1.899,00</span></div>
-                  <div class="tag-sale">-25%</div>
-                </div>
+    <!-- PRODUTO 1 -->
+    <div class="card">
+        <span class="selo">⭐ PREMIUM</span>
+        <img src="colchao-casal-premium.png">
+        <h3>Colchão Casal Premium</h3>
 
-                <div class="payments">
-                  À vista R$1.899,00<br>
-                  Ou com 30 dias — parcelado em 6x de R$347,00 s/ juros aprox. <br>
-                  Ou em 12x de R$181,00 s/ juros aprox.
-                </div>
-              </div>
+        <p class="preco-antigo">De R$ 2.530,00</p>
+        <p class="preco-novo">R$ 1.899,00</p>
 
-              <!-- Buttons -->
-              <div style="margin-top:12px; display:flex; gap:8px; align-items:center; flex-wrap:wrap">
-                <!-- WhatsApp link with UTM and prefilled message -->
-                <a class="btn-whats" 
-                   href="https://wa.me/5531972332609?text=Olá!%20Vim%20do%20anúncio%20do%20Google%20e%20quero%20informações%20sobre%20o%20Colchão%20Casal%20Premium%20(Ref:%20Premium)&utm_source=google&utm_medium=landingpage&utm_campaign=colchao_premium"
-                   target="_blank" rel="noopener noreferrer">
-                  💬 Falar no WhatsApp
-                </a>
+        <p class="parcelamento">
+            À vista ou 30 dias<br>
+            6x de R$ 347,00<br>
+            12x de R$ 181,00
+        </p>
 
-                <a class="btn-light" href="tel:+5531972332609">📞 Ligar: (31) 9 7233-2609</a>
-              </div>
-            </div>
-          </article>
+        <a class="btn" href="https://wa.me/5531972332609?text=Ol%C3%A1!%20Vim%20do%20site%20e%20quero%20informações%20sobre%20o%20Colch%C3%A3o%20Casal%20Premium.&utm_source=site&utm_medium=produto1">
+            FALAR NO WHATSAPP
+        </a>
+    </div>
 
-          <!-- Produto 2 (exemplo) -->
-          <article class="card" aria-labelledby="prod2">
-            <div class="imgwrap">
-              <img src="https://i.imgur.com/HnLQx4m.jpeg" alt="Colchão Queen Ortopédico" />
-            </div>
-            <div class="card-content">
-              <div>
-                <h3 id="prod2">Colchão Queen Ortopédico</h3>
-                <p class="desc">Suporte ideal para a coluna, alta durabilidade.</p>
-                <div class="price-row">
-                  <div class="old-price">R$ 2.230,00</div>
-                  <div class="new-price">R$ 1.899,99</div>
-                  <div class="tag-sale">Oferta</div>
-                </div>
-                <div class="payments">À vista R$1.899,99 • 6x ou 12x disponível</div>
-              </div>
-              <div style="margin-top:12px; display:flex; gap:8px; align-items:center; flex-wrap:wrap">
-                <a class="btn-whats" 
-                   href="https://wa.me/5531972332609?text=Olá!%20Quero%20informações%20sobre%20o%20Colchão%20Queen%20(Ref:%20Queen)&utm_source=google&utm_medium=landingpage&utm_campaign=colchao_queen"
-                   target="_blank" rel="noopener noreferrer">💬 Falar no WhatsApp</a>
-                <a class="btn-light" href="tel:+5531972332609">📞 Ligar</a>
-              </div>
-            </div>
-          </article>
+    <!-- PRODUTO 2 -->
+    <div class="card">
+        <span class="selo">⭐ PREMIUM</span>
+        <img src="colchao-queen.png">
+        <h3>Colchão Queen Ortopédico</h3>
 
-          <!-- Produto 3 (exemplo) -->
-          <article class="card" aria-labelledby="prod3">
-            <div class="imgwrap">
-              <img src="https://i.imgur.com/LVnQfZg.jpeg" alt="Colchão Solteiro Confort Plus" />
-            </div>
-            <div class="card-content">
-              <div>
-                <h3 id="prod3">Colchão Solteiro Confort Plus</h3>
-                <p class="desc">Qualidade com preço acessível.</p>
-                <div class="price-row">
-                  <div class="old-price">R$ 1.150,00</div>
-                  <div class="new-price">R$ 899,00</div>
-                  <div class="tag-sale">Promo</div>
-                </div>
-                <div class="payments">À vista R$899,00 • Parcelas em 6x/12x</div>
-              </div>
-              <div style="margin-top:12px; display:flex; gap:8px; align-items:center; flex-wrap:wrap">
-                <a class="btn-whats" 
-                   href="https://wa.me/5531972332609?text=Olá!%20Quero%20informações%20sobre%20o%20Colchão%20Solteiro%20Confort%20Plus&utm_source=google&utm_medium=landingpage&utm_campaign=colchao_solteiro"
-                   target="_blank" rel="noopener noreferrer">💬 Falar no WhatsApp</a>
-                <a class="btn-light" href="tel:+5531972332609">📞 Ligar</a>
-              </div>
-            </div>
-          </article>
+        <p class="preco-antigo">De R$ 2.990,00</p>
+        <p class="preco-novo">R$ 2.250,00</p>
 
-        </div>
-      </section>
-    </main>
+        <p class="parcelamento">
+            À vista ou 30 dias<br>
+            6x de R$ 410,00<br>
+            12x de R$ 216,00
+        </p>
 
-    <!-- FOOTER -->
-    <footer class="site-footer" role="contentinfo">
-      <div class="contact">
-        <div style="font-weight:800">Meu Sono Colchões</div>
-        <div class="muted">Av. das Flores, 401 — Bom Jardim — Ipatinga, MG</div>
-      </div>
-      <div class="address">
-        Tel: <strong>(31) 9 7233-2609</strong><br>
-        Atendimento: Seg-Sáb 09:00 - 19:00
-      </div>
-    </footer>
+        <a class="btn" href="https://wa.me/5531972332609?text=Ol%C3%A1!%20Cheguei%20pelo%20site%20e%20quero%20informações%20do%20Colch%C3%A3o%20Queen.&utm_source=site&utm_medium=produto2">
+            FALAR NO WHATSAPP
+        </a>
+    </div>
 
-  </div>
+    <!-- PRODUTO 3 -->
+    <div class="card">
+        <span class="selo">⭐ PREMIUM</span>
+        <img src="colchao-solteiro.png">
+        <h3>Colchão Solteiro Confort Plus</h3>
 
-  <!-- Floating WhatsApp -->
-  <a class="whats-float" href="https://wa.me/5531972332609?text=Olá!%20Estou%20vendo%20a%20landing%20page%20e%20gostaria%20de%20mais%20informações&utm_source=landingpage" target="_blank" rel="noopener noreferrer" title="Fale conosco no WhatsApp">
-    💬
-  </a>
+        <p class="preco-antigo">De R$ 1.350,00</p>
+        <p class="preco-novo">R$ 990,00</p>
 
-  <!-- Optional small script to update numbers or do small tweaks -->
-  <script>
-    // Guarantee prices formatted as requested (if you want to change quickly)
-    (function(){
-      // example quick change by JS if needed
-      const newPriceEl = document.getElementById('newprice');
-      const oldPriceEl = document.getElementById('oldprice');
-      // if you want to change values programmatically, edit here
-      // newPriceEl.textContent = '1.899,00';
-      // oldPriceEl.textContent = '2.530,00';
-    })();
-  </script>
+        <p class="parcelamento">
+            À vista ou 30 dias<br>
+            6x de R$ 181,00<br>
+            12x de R$ 99,00
+        </p>
+
+        <a class="btn" href="https://wa.me/5531972332609?text=Ol%C3%A1!%20Vim%20do%20site%20e%20quero%20informações%20do%20Colch%C3%A3o%20Solteiro.&utm_source=site&utm_medium=produto3">
+            FALAR NO WHATSAPP
+        </a>
+    </div>
+
+</div>
+
+<!-- BOTÃO FLUTUANTE -->
+<a class="whatsapp-float" href="https://wa.me/5531972332609?text=Ol%C3%A1!%20Cheguei%20pelo%20site%20da%20Meu%20Sono%20Colch%C3%B5es.&utm_source=site">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+
 </body>
 </html>
